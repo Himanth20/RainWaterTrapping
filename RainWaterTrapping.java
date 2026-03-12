@@ -1,3 +1,7 @@
+
+//Brute force Method
+
+
 import java.util.*;
 public class RainingWaterTrapping {
 
@@ -47,3 +51,4 @@ public class RainingWaterTrapping {
 	}
 
 }
+

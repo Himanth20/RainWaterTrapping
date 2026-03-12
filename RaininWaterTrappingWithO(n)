@@ -1,0 +1,40 @@
+import java.util.*;
+public class RainWaterTrapping {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int i=0,j=0,w=0;
+		int leftMax=0,rightMax=0;
+		for(i=0,j=a.length-1;i<j;)
+		{
+			if(a[i]<a[j])
+			{
+				if(leftMax<=a[i])
+				{
+					leftMax=a[i];
+				}
+				else
+					w+=leftMax-a[i];
+				i++;
+			}
+			else
+			{
+				if(rightMax<=a[j])
+				{
+					rightMax=a[j];
+				}
+				else
+					w+=rightMax-a[j];
+				j--;
+			}
+		}
+		System.out.println(w);
+	}
+
+}
